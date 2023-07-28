@@ -1,11 +1,22 @@
 second.millisecond
 intro starts
-1.137 - small
-2.277 - big 
-3.00 - medium
-4.00 - small
-5.00 - big
-6.00 - medium
+0.412 - first big sound
+1.375 - small
+2.336 - big 
+3.103/3.296/3.489 - medium
+4.260/4.453/4.642 - small
+5.413 - big
+6.181/6.372/6.567 - medium
+6.848 - big
+7.529/7.724/7.910 - medium
+8.101 - big
+8.876/9.061/9.260 - medium
+9.450 - small
+9.643 - big
+9.926/10.121/10.414 - medium
+10.606/10.800/10.988/11.181 - medium
+11.469/11.567/11.661 - medium
+12.136 - big => intro ends
 
 intro ends
 main content #1 
