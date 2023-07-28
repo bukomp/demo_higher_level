@@ -1,2 +1,2 @@
-#!/bin/bash
-processing-java --sketch="/c/Users/My Notebook/Documents/Projects/demo_higher_level/main" --run
+execution_dir=$(pwd)
+processing-java --sketch="$execution_dir/main" --run
