@@ -1,0 +1,33 @@
+second.millisecond
+intro starts
+1.137 - small
+2.277 - big 
+3.00 - medium
+4.00 - small
+5.00 - big
+6.00 - medium
+
+intro ends
+main content #1 
+12.306 - Something big changes
+15.371 - Something big changes
+
+main content #2
+18.437 - Something big changes
+21.414 - Something big changes
+
+main content #3
+24.611 - Something big changes
+27.677 - Something big changes
+
+main content #5
+30.830 - Something big changes
+33.830 - Something big changes
+
+main content #6
+36.873 - Something big changes
+39.982 - Something big changes
+
+Closing, 12sec easing out with rhythm
+6 sec strong with split
+16 sec 10 splits
