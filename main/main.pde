@@ -7,7 +7,6 @@ Scene3 scene3;
 Scene4 scene4;
 Scene5 scene5;
 Scene6 scene6;
-Scene7 scene7;
 Outro outro;
 
 Minim minim;
@@ -27,7 +26,6 @@ void setup() {
   scene4 = new Scene4();
   scene5 = new Scene5();
   scene6 = new Scene6();
-  scene7 = new Scene7();
 
   outro = new Outro();
 
@@ -70,9 +68,6 @@ void draw() {
         scene6.play(); 
       break;
     case 7:
-        scene7.play(); 
-      break;
-    case 8:
         outro.play(); 
       break;
   }
