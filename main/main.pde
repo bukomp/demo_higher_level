@@ -6,12 +6,12 @@ float[] timestamps;
 int currentTimestampIndex = 0;
 
 void setup() {
-  size(800, 600);
+  size(1280, 720);
   minim = new Minim(this);
   song = minim.loadFile("data/Suspense__BPM156.mp3", 2048);
   song.play();
   
-  // replace this with your actual timestamps
+  // Timestamps to trigger different scenes
   timestamps = new float[] {1.5, 2.3, 4.2, 5.0, 6.7, 7.1, 9.5, 11.0, 12.4, 13.2};
 }
 
@@ -33,6 +33,11 @@ void draw() {
     
     // move on to the next timestamp
     currentTimestampIndex++;
+  }
+
+  switch (currentTimestampIndex) {
+    case 0:
+    
   }
 }
 
