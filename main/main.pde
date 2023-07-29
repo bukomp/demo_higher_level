@@ -18,7 +18,7 @@ AudioPlayer song;
 SyncManager syncManager;
 
 void setup() {
-  size(1280, 720);
+  size(1920, 1080);
   
   minim = new Minim(this);
 
