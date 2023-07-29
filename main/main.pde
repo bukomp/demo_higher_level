@@ -19,7 +19,7 @@ SyncManager syncManager;
 
 void setup() {
   size(1920, 1080, P3D);
-  
+  fullScreen();
   minim = new Minim(this);
 
   intro = new Intro();
@@ -48,8 +48,10 @@ void drawTimer() {
   int millisec = timeRemaining % 1000;  // calculate milliseconds
 
   // format the time as ss:ms
+  textAlign(RIGHT, TOP);  // align text to top right
+  textSize(50);  // large timer text
   timerText = "df:hl:"+nf(seconds, 2) + ":" + nf(millisec, 3);
-  fill(100, 100, 200, 70);
+  fill(100, 100, 200, 90);
   // display the timer text in the top right corner
   text(timerText, width - 20, 10);
 

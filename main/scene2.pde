@@ -21,6 +21,7 @@ class Scene2 {
     tree = createShape(GROUP);
   }
 
+  float extraheight = 100.0;
   boolean timestampHandled = false;
   void play() {
     float scenePos = syncManager.getCurrentScenePosition();
@@ -36,9 +37,27 @@ class Scene2 {
     level = constrain(level, 0, 9);
     
     // call the function to draw the fractal tree
-    //fill(254, 234, 78);
-    drawTree(width/2, height+50, 500, 0, level); 
-  
+    stroke(254, 234, 78, 70);
+    strokeWeight(30);
+    drawTree(width/2, height+150+(extraheight*syncManager.getCurrentScenePositionNormalized()+(extraheight*syncManager.getCurrentScenePositionNormalized())), 400, 0, level);
+    stroke(254, 234, 78);
+    strokeWeight(15);
+    drawTree(width/2, height+150+(extraheight*syncManager.getCurrentScenePositionNormalized()+(extraheight*syncManager.getCurrentScenePositionNormalized())), 400, 0, level);
+    
+    stroke(254, 234, 78);
+    strokeWeight(8);
+    drawTree(width/5, height-250+(extraheight*syncManager.getCurrentScenePositionNormalized()), 200, 0, level);
+    stroke(254, 234, 78);
+    strokeWeight(8);
+    drawTree(width-(width/5), height-250+(extraheight*syncManager.getCurrentScenePositionNormalized()), 200, 0, level);
+   
+    textAlign(LEFT, BOTTOM);  // align text to top right
+    textSize(90);  // large timer text
+    fill(255, 255, 255);
+    
+    // display the timer text in the top right corner
+    text("WE GROW HIGHER", 20 , height-20);
+    
     // if the maximum time has been reached, reset the start time
     if (timeDiff > maxTime) {
       startTime = millis();
