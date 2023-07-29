@@ -9,7 +9,6 @@ class Intro {
     this.gridVisible = false;
     this.timestamps = new float[] {0.5, 6.8, 11.0}; 
     this.currentTimestampIndex = 0;
-    this.glowingGrid = new GlowingGrid(20, 20, 20.0);
   }
 
   boolean timestampHandled = false;
@@ -19,8 +18,6 @@ class Intro {
 
     if(this.currentTimestampIndex == 0){
       // Trigger a visual event (e.g., change background color)
-
-      this.glowingGrid.display(width/2, height/2);
     }
   
     // If the current song position has passed the next timestamp
