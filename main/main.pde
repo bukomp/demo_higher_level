@@ -48,8 +48,8 @@ void drawTimer() {
   int millisec = timeRemaining % 1000;  // calculate milliseconds
 
   // format the time as ss:ms
-  timerText = nf(seconds, 2) + ":" + nf(millisec, 3);
-
+  timerText = nf(seconds, 2) + ":" + nf(millisec, 2);
+  fill(100, 100, 200, 70);
   // display the timer text in the top right corner
   text(timerText, width - 20, 20);
 

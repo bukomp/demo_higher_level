@@ -15,7 +15,7 @@ class Intro {
   boolean timestampHandled = false;
   void play() {
     float scenePos = syncManager.getCurrentScenePosition();
-    background(random(255), random(255), random(255));
+    background(255, 255, 255);
 
     if(this.currentTimestampIndex == 0){
       // Trigger a visual event (e.g., change background color)

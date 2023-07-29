@@ -7,13 +7,14 @@ class Scene2 {
     this.gridVisible = false;
     this.timestamps = new float[] {}; 
     this.currentTimestampIndex = 0;
+
   }
 
   boolean timestampHandled = false;
   void play() {
     float scenePos = syncManager.getCurrentScenePosition();
-    background(0);
-
+    background(237, 24, 191);
+    
     if(this.currentTimestampIndex == 0){
       // Trigger a visual event (e.g., change background color) on initial launch
     }
