@@ -7,7 +7,7 @@ class SyncManager {
     
   SyncManager() {
     this.mainTimeStamps = new float[] {1.5, 2.3, 4.2, 5.0, 6.7, 7.1, 9.5, 11.0, 12.4, 13.2};
-    this.sceneTimeStamps = new float[] {12.0, 18.0, 24.0, 30.0, 36.0, 42.0, 48.0, 54.0, 60.0};
+    this.sceneTimeStamps = new float[] {12.325131, 18.489089, 24.645389, 30.781629, 36.937955, 43.126194, 49.247259, 60.027609};
   }
   
   void UpdateSongPos(float songPos) {
