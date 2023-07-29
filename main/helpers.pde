@@ -1,4 +1,4 @@
-int cell = 50; //set a grid cell
+
 
 void grid () {
   background(0);  // We're using a black background for a better neon effect

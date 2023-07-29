@@ -2,9 +2,10 @@ import ddf.minim.*;
 
 Minim minim;
 AudioPlayer song;
-float[] timestamps;
-int currentTimestampIndex = 0;
+float[] mainTimeStamps;
+int currentMainTimestampIndex = 0;
 
+Intro intro = new Intro();
 void setup() {
   size(1280, 720);
   minim = new Minim(this);
@@ -12,14 +13,13 @@ void setup() {
   song.play();
   
   // Timestamps to trigger different scenes
-  timestamps = new float[] {1.5, 2.3, 4.2, 5.0, 6.7, 7.1, 9.5, 11.0, 12.4, 13.2};
+  mainTimeStamps = new float[] {12.0};
 }
 
-void draw() {
-  background(0);
-  
+void draw() {  
+
   // if there are no more timestamps, do nothing
-  if(currentTimestampIndex >= timestamps.length) {
+  if(currentMainTimestampIndex >= mainTimeStamps.length) {
     return;
   }
   
@@ -27,17 +27,15 @@ void draw() {
   float songPos = song.position() / 1000.0;
   
   // if the current song position has passed the next timestamp
-  if(songPos > timestamps[currentTimestampIndex]) {
-    // trigger a visual event (e.g., change background color)
-    background(random(255), random(255), random(255));
-    
+  if(songPos > mainTimeStamps[currentMainTimestampIndex]) {
     // move on to the next timestamp
-    currentTimestampIndex++;
+    currentMainTimestampIndex++;
   }
 
-  switch (currentTimestampIndex) {
+  switch (currentMainTimestampIndex) {
     case 0:
-    
+      intro.play();    
+      break;
   }
 }
 
