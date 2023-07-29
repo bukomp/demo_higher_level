@@ -19,11 +19,11 @@ class Scene2 {
     }
   
     // If the current song position has passed the next timestamp
-    if(scenePos > this.timestamps[this.currentTimestampIndex]) {
+    /*if(scenePos > this.timestamps[this.currentTimestampIndex]) {
       // Trigger a visual event (e.g., change background color)
       
       // Move on to the next timestamp
       this.currentTimestampIndex++;
-    }
+    }*/
   }
 }
