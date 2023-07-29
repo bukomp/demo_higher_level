@@ -12,7 +12,7 @@ class Scene3 {
   boolean timestampHandled = false;
   void play() {
     float scenePos = syncManager.getCurrentScenePosition();
-background(100, 0, 100);
+    background(100, 0, 100);
     //if(this.currentTimestampIndex == 0){
     //  // Trigger a visual event (e.g., change background color) on initial launch
     //}

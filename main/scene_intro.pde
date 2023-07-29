@@ -3,8 +3,6 @@ class Intro {
   float[] timestamps;
   int currentTimestampIndex;
   GlowingGrid glowingGrid;
-  TextLine[] myLines;
-
 
   // Constructor of the Intro class
   Intro() {
@@ -21,7 +19,7 @@ class Intro {
   boolean timestampHandled = false;
   void play() {
     float scenePos = syncManager.getCurrentScenePosition();
-    background(0);
+    background(255, 255, 255);
 
     if(this.currentTimestampIndex == 0){
       for (TextLine line : myLines) {
@@ -68,5 +66,3 @@ class Intro {
   }
 }
 }
-
-
