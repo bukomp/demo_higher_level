@@ -1,5 +1,9 @@
 import ddf.minim.*;
 
+int startTime;  // the time at the start
+int totalMillis = 60 * 1000;  // total time in milliseconds
+String timerText;  // text to display
+
 Intro intro;
 Scene1 scene1;
 Scene2 scene2;
@@ -28,10 +32,31 @@ void setup() {
   scene6 = new Scene6();
 
   outro = new Outro();
+  
+  textAlign(RIGHT, TOP);  // align text to top right
+  textSize(50);  // large timer text
+  startTime = millis();  // store the start time
 
   syncManager = new SyncManager();
   song = minim.loadFile("data/Suspense__BPM156.mp3", 2048);
   song.play();
+}
+
+void drawTimer() {
+  int timeRemaining = totalMillis - (millis() - startTime);  // calculate remaining time
+  int seconds = timeRemaining / 1000;  // calculate seconds
+  int millisec = timeRemaining % 1000;  // calculate milliseconds
+
+  // format the time as ss:ms
+  timerText = nf(seconds, 2) + ":" + nf(millisec, 3);
+
+  // display the timer text in the top right corner
+  text(timerText, width - 20, 20);
+
+  // stop the program when the time is up
+  if (timeRemaining <= 0) {
+    noLoop();
+  }
 }
 
 boolean MusicSyncHandled = false;
@@ -71,6 +96,8 @@ void draw() {
         outro.play(); 
       break;
   }
+  
+  drawTimer();
 }
 
 void stop() {
