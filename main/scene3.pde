@@ -2,10 +2,18 @@ class Scene3 {
   boolean gridVisible;
   float[] timestamps;
   int currentTimestampIndex;
+  
+  int lastMs = 0;
+  int currentMusicTimeStamp = 0;
+    int beatCounter = 0;
+
+
   TextLine line1;
   TextLine line2;
   TextLine line3;
   TextLine line4;
+
+  color currentColor;
 
 
   // Variables for the scene 3
@@ -42,13 +50,32 @@ class Scene3 {
   boolean didSecondEffect = false;
 
   void play() {
+
+    int songPos = int(syncManager.getSongPos()*1000);
     float scenePos = syncManager.getCurrentScenePosition();
+
+    if(songPos > this.lastMs){
+      this.lastMs = songPos;
+      if(this.currentMusicTimeStamp < syncManager.getCurrentMusicSyncIndex()){
+        this.currentMusicTimeStamp = syncManager.getCurrentMusicSyncIndex();
+        this.beatCounter++;
+        currentColor = currentColor==YELLOW ? LIGHTBLUE : YELLOW;
+
+        switch(this.beatCounter){
+          case 1:
+            break;
+          default:
+            break;
+        }
+
+      }
+
+    }
     if (lastMusicSyncIndex != syncManager.getCurrentMusicSyncIndex()){
       lastMusicSyncIndex = syncManager.getCurrentMusicSyncIndex();
       timestampHandled = false;
     }
       // Switch color every 2 seconds
-    color currentColor = (millis()/2000 % 2 == 0) ? LIGHTBLUE : YELLOW;
     
     // Set the color for the lines and background
     stroke(currentColor);
