@@ -29,10 +29,10 @@ class Scene3 {
     textAlign(CENTER, CENTER);
 //    textSize(100);
 
-    line1 = new TextLine(100, 0, 25, -75, color(LIGHTBLUE), "a");
-    line2 = new TextLine(100, 0, 25, -25, color(LIGHTBLUE), "a");
-    line3 = new TextLine(100, 0, -25, -25, color(LIGHTBLUE), "a");
-    line4 = new TextLine(50, 0, -25, -75, color(YELLOW), ":)");
+    line1 = new TextLine(75, 0, 25, -72, color(LIGHTBLUE), "a");
+    line2 = new TextLine(75, 0, 25, -22, color(LIGHTBLUE), "a");
+    line3 = new TextLine(75, 0, -25, -22, color(LIGHTBLUE), "a");
+    line4 = new TextLine(40, 0, -22, -55, color(YELLOW), ":)");
 
   }
 
