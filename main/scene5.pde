@@ -3,6 +3,13 @@ class Scene5 {
   float[] timestamps;
   int currentTimestampIndex;
 
+int a=width; //sketch size
+float s=5; //length of line
+float x, y; //start of line
+int j = 0; //first "wipe"
+int k = -500; //second "wipe" 
+
+
   Scene5() {
     this.gridVisible = false;
     this.timestamps = new float[] {}; 
@@ -12,17 +19,31 @@ class Scene5 {
   boolean timestampHandled = false;
   void play() {
     float scenePos = syncManager.getCurrentScenePosition();
-background(0, 0, 100);
-    //if(this.currentTimestampIndex == 0){
-    //  // Trigger a visual event (e.g., change background color) on initial launch
-    //}
-  
-    //// If the current song position has passed the next timestamp
-    //if(scenePos > this.timestamps[this.currentTimestampIndex]) {
-    //  // Trigger a visual event (e.g., change background color)
-      
-    //  // Move on to the next timestamp
-    //  this.currentTimestampIndex++;
-    //}
+    float scenePosNormalised = syncManager.getCurrentScenePositionNormalized();
+
+    if(scenePosNormalised > 0.999999999){
+      song.unmute();
+    }else if(scenePosNormalised> 0.00000001){
+      song.mute();
+      noStroke();
+    }
+    for (int i=0;i<=0.5*a;i++) {
+      stroke(random(0,255));
+      x = random(0,a);
+      y = random(0,a);
+      line(x,y,x+random(0,s),y);
+  }
+  stroke(100,100);
+  line(000000.1,j,a,j);
+  j++;
+  if (j>a) {
+    j=0;
+  }
+  stroke(100,100);
+  line(000000.1,k,a,k);
+  k++;
+  if (k>a) {
+    k=0;
+  }
   }
 }
