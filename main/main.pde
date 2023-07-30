@@ -19,7 +19,7 @@ SyncManager syncManager;
 
 void setup() {
   size(1920, 1080, P3D);
-  fullScreen();
+  fullScreen(P3D);
   minim = new Minim(this);
 
   intro = new Intro();
@@ -80,7 +80,7 @@ void draw() {
         scene1.play(); 
       break;
     case 2:
-        scene2.play(); 
+        scene5.play(); 
       break;
     case 3:
         scene3.play(); 
@@ -89,7 +89,7 @@ void draw() {
         scene4.play(); 
       break;
     case 5:
-        scene5.play(); 
+        scene2.play(); 
       break;
     case 6:
         scene6.play(); 
