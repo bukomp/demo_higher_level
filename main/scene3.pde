@@ -2,6 +2,11 @@ class Scene3 {
   boolean gridVisible;
   float[] timestamps;
   int currentTimestampIndex;
+  TextLine line1;
+  TextLine line2;
+  TextLine line3;
+  TextLine line4;
+
 
   // Variables for the scene 3
   static final int NUM_LINES = 15;
@@ -22,7 +27,13 @@ class Scene3 {
 
     // Set up text properties for scene 3
     textAlign(CENTER, CENTER);
-    textSize(100);
+//    textSize(100);
+
+    line1 = new TextLine(100, 0, 25, -75, color(LIGHTBLUE), "a");
+    line2 = new TextLine(100, 0, 25, -25, color(LIGHTBLUE), "a");
+    line3 = new TextLine(100, 0, -25, -25, color(LIGHTBLUE), "a");
+    line4 = new TextLine(50, 0, -25, -75, color(YELLOW), ":)");
+
   }
 
   boolean timestampHandled = false;
@@ -66,8 +77,14 @@ class Scene3 {
     }
     
     // Draw the current letter
-    text(letters.charAt(currentLetterIndex), 0, 0);
-    fill(255, 255, 255);
+    line1.changeText(letters.charAt(currentLetterIndex)+"");
+    line2.changeText(letters.charAt(currentLetterIndex)+"");
+    line3.changeText(letters.charAt(currentLetterIndex)+"");
+
+    line1.display();
+    line2.display();
+    line3.display();
+    line4.display();
 
     if (timestampHandled = false) {
       if (didInitialEffect && !didSecondEffect) {
@@ -81,17 +98,7 @@ class Scene3 {
       
       timestampHandled = true;
     }
-    //if(this.currentTimestampIndex == 0){
-    //  // Trigger a visual event (e.g., change background color) on initial launch
-    //}
-  
-    //// If the current song position has passed the next timestamp
-    //if(scenePos > this.timestamps[this.currentTimestampIndex]) {
-    //  // Trigger a visual event (e.g., change background color)
-      
-    //  // Move on to the next timestamp
-    //  this.currentTimestampIndex++;
-    //}
+
   }
   
   float x1(float t) {
@@ -110,20 +117,20 @@ float y2(float t) {
   return cos(t/10)*200;
 }
 
-void shaking(float shakeX1, float shakeY1, float shakeX2, float shakeY2){
-    // Switch color every 2 seconds
-    color currentColor = (millis()/2000 % 2 == 0) ? LIGHTBLUE : YELLOW;
-    
-    // Set the color for the lines and background
-    stroke(currentColor);
-    background(255 - red(currentColor), 255 - green(currentColor), 255 - blue(currentColor));
-    strokeWeight(5);
-    
-    translate(width/2, height/2);
-    for (int i = 0; i < NUM_LINES; i++){
-      line(x1(t+i)+shakeX1, y1(t+i)+shakeY1, x2(t+i)+shakeX2, y2(t+i)+shakeY2);
-      line(y1(t+i)+shakeY1, x1(t+i)+shakeX1, y2(t+i)+shakeY2, x2(t+i)+shakeX2);
-    }
-    t += 1;
-}
+//void shaking(float shakeX1, float shakeY1, float shakeX2, float shakeY2){
+//    // Switch color every 2 seconds
+//    color currentColor = (millis()/2000 % 2 == 0) ? LIGHTBLUE : YELLOW;
+//    
+//    // Set the color for the lines and background
+//    stroke(currentColor);
+//    background(255 - red(currentColor), 255 - green(currentColor), 255 - blue(currentColor));
+//    strokeWeight(5);
+//    
+//    translate(width/2, height/2);
+//    for (int i = 0; i < NUM_LINES; i++){
+//      line(x1(t+i)+shakeX1, y1(t+i)+shakeY1, x2(t+i)+shakeX2, y2(t+i)+shakeY2);
+//      line(y1(t+i)+shakeY1, x1(t+i)+shakeX1, y2(t+i)+shakeY2, x2(t+i)+shakeX2);
+//    }
+//    t += 1;
+//}
 }
