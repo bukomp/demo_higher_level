@@ -1,25 +1,8 @@
-1. Scene opens up with a gridline-styled horizon that is classic of 80s retro art, set against a starry neon sky. 
-Vapourwave-esque synth music begins to play in the background, slowly building up.
-
-2. Suddenly, a cool, digital Tron-like vehicle (a sleek race car or a motorcycle) blazes in from the left 
-side of the screen, trailing neon lights. As it zooms past the screen, the name "mov" is left behind in a glowing, vibrant neon script.
-
-3. No sooner than the name solidifies, a second vehicle zooms in from the right side, 
-this one a futuristic flying craft, leaving a similar neon trail in its wake. 
-As it disappears off the screen, the name "himpu" appears in glowing, vibrant neon script.
-
-4. The third name "Greatest$PAG" is then revealed in a bit more dramatic way. From the horizon, 
-a large, digital spaceship rises, its lights illuminating the grid. As it ascends to the center 
-of the screen, it sends out a shockwave of light, leaving behind the name "Greatest$PAG" in the middle of the screen.
-
-5. After a moment, the spaceship disappears into the sky, leaving a trail of 
-pixelated sparkles that coalesce to form the team name.
-
-6. The team name is written in bold, metallic 3D letters that rotate and then fly towards the screen. 
-The background starts to vibrate and flicker with each letter flying towards the camera.
-
-7. Finally, a bright, all-consuming digital sunrise (the bright light) comes from the horizon, 
-causing the grid to shatter and dissolve, as the camera starts moving towards it, accelerating.
-
-8. The screen goes white as we 'enter' the light, signaling the end of the intro scene and 
-transition into the next scene.
+00:00 intro:  Edvard        Lines of text
+12:35 1:      Edvard        Flashing Level UP
+18:48 2:      Edvard        Empty
+24:64 3:      Hilma         spinny thing
+30:78 4:      Hilma         balls
+36:93 5:      Jouni         tree
+43:12 6:      Hilma         Car
+49:24 outro:  Edvard/Hilma  Team Name
