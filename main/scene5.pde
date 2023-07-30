@@ -18,7 +18,7 @@ class Scene5 {
     this.timestamps = new float[] {}; 
     this.currentTimestampIndex = 0;
     this.noscene = new TextLine(height/8, 0, width/2, height/2-height/16-25, color(255), "[ scene missing ]");
-    this.noscene2 = new TextLine(height/20, 0, width/2, height/2+height/16, color(255), "[ Or is it? :D ]");
+    this.noscene2 = new TextLine(height/20, 0, width/2, height/2+height/16, color(255), "Or is it? :D");
 
   }
 

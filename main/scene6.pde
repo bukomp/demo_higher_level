@@ -11,7 +11,7 @@ class Scene6 {
   float[] circleSizes = new float[numCircles];
 
   // The rate at which the circles grow
-  float growthRate = 1.025f;
+  float growthRate = 1.0025f;
 
   // Index of the circle used for the car's size
   int carCircleIndex = 0;
@@ -71,7 +71,7 @@ class Scene6 {
     }
 
     // Draw the car - make it shrink as it moves towards the end
-    float carSize = width/2*syncManager.getCurrentScenePositionNormalizedOverdrive();
+    float carSize = width/2*(1-syncManager.getCurrentScenePositionNormalized())*2;
     image(car, width/2, height/2, carSize, carSize);
   
     // Draw the text and make it grow as the car shrinks
