@@ -80,7 +80,7 @@ void draw() {
         scene1.play(); 
       break;
     case 2:
-        scene5.play(); 
+        scene2.play(); 
       break;
     case 3:
         scene3.play(); 
@@ -89,7 +89,7 @@ void draw() {
         scene4.play(); 
       break;
     case 5:
-        scene2.play(); 
+        scene5.play(); 
       break;
     case 6:
         scene6.play(); 

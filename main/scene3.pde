@@ -61,7 +61,6 @@ class Scene3 {
 
     println(lastMusicSyncIndex);
 
-    if(syncManager.getSongPos >)
 
     // Change letter in the middle
     if (millis() - lastChangeTime >= 100) {
