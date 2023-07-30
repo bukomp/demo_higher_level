@@ -43,6 +43,7 @@ class Scene1 {
             break;
           default:
               this.levelup.changePosition(width/2, height/2-height/8);
+              this.levelup.changeText("with {AI} !");
             break;
         }
 

@@ -71,7 +71,7 @@ class Scene6 {
     }
 
     // Draw the car - make it shrink as it moves towards the end
-    float carSize = width/2*pow(syncManager.getCurrentScenePositionNormalizedOverdrive(),2);
+    float carSize = width/2*syncManager.getCurrentScenePositionNormalizedOverdrive();
     image(car, width/2, height/2, carSize, carSize);
   
     // Draw the text and make it grow as the car shrinks
