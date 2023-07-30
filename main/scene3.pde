@@ -59,9 +59,6 @@ class Scene3 {
     }
     t += 1;
 
-    println(lastMusicSyncIndex);
-
-
     // Change letter in the middle
     if (millis() - lastChangeTime >= 100) {
       currentLetterIndex = (currentLetterIndex + 1) % letters.length();

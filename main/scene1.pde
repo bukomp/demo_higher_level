@@ -15,7 +15,7 @@ class Scene1 {
     this.currentTimestampIndex = 0;
     this.currentMusicTimeStamp = 0;
     this.beatCounter = 0;
-    this.levelup = new TextLine(height/4, 0, height/2.5, height/1.8, color(random(255), random(255), random(255)), "Level Up!");
+    this.levelup = new TextLine(height/4, 0, width/2, height/2-height/8, color(random(255), random(255), random(255)), "Level Up!");
   }
 
   void play() {
@@ -26,7 +26,6 @@ class Scene1 {
     this.levelup.display();
     this.levelup.changeColor(color(random(255), random(255), random(255)));
 
-
     if(songPos > this.lastMs){
       this.lastMs = songPos;
       if(this.currentMusicTimeStamp < syncManager.getCurrentMusicSyncIndex()){
@@ -34,16 +33,16 @@ class Scene1 {
         this.beatCounter++;
         switch(this.beatCounter){
           case 1:
-              this.levelup.changePosition(0, height/4);
+              this.levelup.changePosition(width/2+width/8, height/8);
             break;
           case 2:
-              this.levelup.changePosition(height/1.3, height-height/4);
+              this.levelup.changePosition(width/2+width/8, height/2+height/8);
             break;
           case 3:
-              this.levelup.changePosition(0, height-height/4);
+              this.levelup.changePosition(width/2-width/8, height/2+height/8);
             break;
           default:
-              this.levelup.changePosition(height/2.5, height/1.8);
+              this.levelup.changePosition(width/2, height/2-height/8);
             break;
         }
 

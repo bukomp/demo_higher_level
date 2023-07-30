@@ -16,8 +16,8 @@ class Intro {
     int maxSize = 200;  // maximum text size
     color textColor = color(255,221,66,0);  // yellow
 
-    float heightInterval = height / 11;
-    float widthInterval = 1920 ;
+    float heightInterval = height / 18;
+    float widthInterval = 1920/3*2 ;
 
 this.myLines = new TextLine[]{
   new TextLine(random(minSize, maxSize), 23.5, widthInterval, heightInterval * 1.7f, textColor, "Growth exists in every bug."),
@@ -77,12 +77,12 @@ this.myLines = new TextLine[]{
     }
 
     if(this.currentTimestampIndex == 1){
-      setBackground(pow(syncManager.getCurrentScenePositionNormalized(),7));
+      setBackground(pow(syncManager.getCurrentScenePositionNormalized(),20));
 
       for (TextLine line : myLines) {
 
         if(line.lineColor !=  color(255,221,66,255)){
-          line.changeColor(color(255,221,66,pow(syncManager.getCurrentScenePositionNormalized(),7)*255));
+          line.changeColor(color(255,221,66,pow(syncManager.getCurrentScenePositionNormalized(),5)*255));
         }
         line.display();
 

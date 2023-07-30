@@ -20,11 +20,14 @@ class TextLine {
     translate(xPos, yPos);
     rotate(radians(rotation));
     textSize(size);
-    
+  
+    // Set the alignment to center
+    textAlign(CENTER, CENTER);
+  
     // Display original text
     fill(lineColor);
-    text(text, 0, 0);
-    
+    text(text, 0, size/3);
+  
     popMatrix();
   }
 
@@ -42,5 +45,10 @@ class TextLine {
   // Method to change color of line
   void changeColor(color newColor) {
     this.lineColor = newColor;
+  }
+
+  // Method to change alignment of line
+  void changeAlign(int x, int y) {
+    textAlign(x, y);
   }
 }
