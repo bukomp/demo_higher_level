@@ -3,10 +3,9 @@ class Scene6 {
   float[] timestamps;
   int currentTimestampIndex;
 
-  // VARIABLES FOR SCENE 6
-  PImage car;
+
   // The number of circles
-  int numCircles = 150;
+  int numCircles = 50;
 
   // The circles' sizes
   float[] circleSizes = new float[numCircles];
@@ -29,7 +28,6 @@ class Scene6 {
     // SETUP FOR SCENE 6
     smooth(); 
 
-    car = loadImage("/data/car.png");
     
     // Initialize the circle sizes
     for (int i = 0; i < numCircles; i++) {
@@ -44,8 +42,7 @@ class Scene6 {
     
     // No stroke on the circles
     noStroke();
-    //Text alignment
-    textAlign(CENTER, CENTER);
+
   }
 
   boolean timestampHandled = false;
@@ -74,7 +71,7 @@ class Scene6 {
     }
 
     // Draw the car - make it shrink as it moves towards the end
-    float carSize = map(carCircleIndex, 0, numCircles, 0, width);
+    float carSize = width/2*pow(syncManager.getCurrentScenePositionNormalized(),2);
     image(car, width/2, height/2, carSize, carSize);
   
     // Draw the text and make it grow as the car shrinks

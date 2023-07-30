@@ -45,14 +45,14 @@ class SyncManager {
     return timePos;
   }
   
-  // Returns 0..1
+// Returns 1..0
   float getCurrentScenePositionNormalized() {
     float currentStepPos = this.sceneTimeStamps[this.currentSceneIndex];
     float nextStepPos = this.sceneTimeStamps[this.currentSceneIndex+1];
     float timeMax = nextStepPos - currentStepPos;
     float timePos = songPos - currentStepPos;
     float normalizedTimePosition = timePos / timeMax;
-    return normalizedTimePosition;
+    return 1 - normalizedTimePosition;
   }
   
   float getSongPos() {

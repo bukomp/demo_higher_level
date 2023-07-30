@@ -16,6 +16,7 @@ Outro outro;
 Minim minim;
 AudioPlayer song;
 SyncManager syncManager;
+PImage car;
 
 void setup() {
   size(1920, 1080, P3D);
@@ -40,6 +41,9 @@ void setup() {
   syncManager = new SyncManager();
   song = minim.loadFile("data/Suspense__BPM156.mp3", 2048);
   song.play();
+
+  car = loadImage("data/car.png");
+
 }
 
 void drawTimer() {

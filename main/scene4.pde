@@ -7,7 +7,7 @@ class Scene4 {
   TextMover textmove;
 
 
-Planet[] planets = new Planet[600]; 
+Planet[] planets = new Planet[400]; 
 PVector spaceship;
 
 
@@ -30,17 +30,6 @@ PVector spaceship;
   void play() {
     float scenePos = syncManager.getCurrentScenePosition();
 background(0, 100, 100);
-    //if(this.currentTimestampIndex == 0){
-    //  // Trigger a visual event (e.g., change background color) on initial launch
-    //}
-  
-    //// If the current song position has passed the next timestamp
-    //if(scenePos > this.timestamps[this.currentTimestampIndex]) {
-    //  // Trigger a visual event (e.g., change background color)
-      
-    //  // Move on to the next timestamp
-    //  this.currentTimestampIndex++;
-    //}
     background(color(unhex("ED"), unhex("18"), unhex("BF")));
   lights();
 
@@ -84,6 +73,9 @@ class Planet { // a planet with position, size and color
   float size;
   color c;
 
+Planet(){
+    // No stroke on the circles
+}
 color[] colors = {
   color(unhex("42"), unhex("11"), unhex("ED")),
   color(unhex("12"), unhex("F4"), unhex("EB")),
@@ -98,6 +90,7 @@ color[] colors = {
 
   void display() { // draws the planet
     pushMatrix();
+    noStroke();
     translate(pos.x, pos.y, pos.z);
     fill(c, 95);
     sphere(size);
