@@ -40,8 +40,7 @@ class Scene6 {
     ellipseMode(CENTER);
     imageMode(CENTER);
     
-    // Set the color mode to HSB for better color transitions
-    colorMode(HSB, 360, 100, 100);
+ 
     
     // No stroke on the circles
     noStroke();
