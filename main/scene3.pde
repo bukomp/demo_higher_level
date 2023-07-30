@@ -109,4 +109,21 @@ float x2(float t) {
 float y2(float t) {
   return cos(t/10)*200;
 }
+
+void shaking(float shakeX1, float shakeY1, float shakeX2, float shakeY2){
+    // Switch color every 2 seconds
+    color currentColor = (millis()/2000 % 2 == 0) ? LIGHTBLUE : YELLOW;
+    
+    // Set the color for the lines and background
+    stroke(currentColor);
+    background(255 - red(currentColor), 255 - green(currentColor), 255 - blue(currentColor));
+    strokeWeight(5);
+    
+    translate(width/2, height/2);
+    for (int i = 0; i < NUM_LINES; i++){
+      line(x1(t+i)+shakeX1, y1(t+i)+shakeY1, x2(t+i)+shakeX2, y2(t+i)+shakeY2);
+      line(y1(t+i)+shakeY1, x1(t+i)+shakeX1, y2(t+i)+shakeY2, x2(t+i)+shakeX2);
+    }
+    t += 1;
+}
 }
