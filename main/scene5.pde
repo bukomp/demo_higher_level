@@ -37,7 +37,7 @@ class Scene5 {
       background(0);
 
       this.noscene.display();
-      this.noscene2.display();
+      //this.noscene2.display();
 
 
       for (int i=0;i<=0.5*a;i++) {
