@@ -51,7 +51,7 @@ void drawTimer() {
   textAlign(RIGHT, TOP);  // align text to top right
   textSize(50);  // large timer text
   timerText = "df:hl:"+nf(seconds, 2) + ":" + nf(millisec, 3);
-  fill(100, 100, 200, 90);
+  fill(255);
   // display the timer text in the top right corner
   text(timerText, width - 20, 10);
 
