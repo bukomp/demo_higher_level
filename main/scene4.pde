@@ -1,4 +1,4 @@
-float speed = 0.1f;
+float speed = 0.01f;
 
 class Scene4 {
   boolean gridVisible;
@@ -34,7 +34,7 @@ background(0, 100, 100);
   lights();
 
   spaceship.z += speed;
-  speed += 0.6;
+  speed += 0.2;
   
   for (Planet p : planets) {
     p.display();

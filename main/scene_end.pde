@@ -20,7 +20,7 @@ class Outro {
 
     // SETUP VARIABLES FOR SCENE 6
     background(255);
-    textSize(150); // Change this value for bigger or smaller text
+    textSize(200); // Change this value for bigger or smaller text
     textAlign(CENTER, CENTER);
   }
 
@@ -55,6 +55,8 @@ class Outro {
     // Draw the part of the group name that should be visible
     for (int j = 0; j <= wordIndex; j++) {
       for (int i = 0; i < (j < wordIndex ? groupNames[j].length() : letterIndex); i++) {
+        textSize(150); // Change this value for bigger or smaller text
+        textAlign(CENTER, CENTER);
         fill(palette[i % palette.length]);  // Color from palette for each letter
         text(groupNames[j].charAt(i), width/2 - (groupNames[j].length() * 50) + (i * 100), height/2 + (j * 200) - 100);
       }
