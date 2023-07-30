@@ -77,7 +77,7 @@ class Scene6 {
     // Draw the text and make it grow as the car shrinks
     float textSize = map(carCircleIndex, 0, numCircles, 0, width/2);
     fill(255, 0, 255);
-    textSize(textSize);
+    textSize(textSize+1);
     text("reach new heights", width/2, height/1.8);
 
 

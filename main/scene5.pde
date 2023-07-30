@@ -29,7 +29,7 @@ class Scene5 {
 
 
 
-    if(scenePosNormalised > 0.999999999){
+    if(scenePosNormalised > 0.9){
       song.unmute();
     }else if(scenePosNormalised> 0.00000001){
       song.mute();

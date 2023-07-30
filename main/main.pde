@@ -21,6 +21,7 @@ PImage car;
 void setup() {
   size(1920, 1080, P3D);
   fullScreen(P3D);
+  noCursor();
   minim = new Minim(this);
 
   intro = new Intro();
@@ -111,4 +112,5 @@ void stop() {
   song.close();
   minim.stop();
   super.stop();
+  exit();
 }
