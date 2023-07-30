@@ -55,7 +55,6 @@ class Scene6 {
       fill(i % 2 == 0 ? color1 : color2);
       
       // Draw the circle
-      ellipse(width/2, height/2, circleSizes[i] * 3, circleSizes[i] * 3);
     
       // Grow the circle
       circleSizes[i] *= growthRate;
